@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A photo gallery of Lesotho's mountains, villages and landmarks.">
+  <title>Discover Lesotho | Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav class="navbar navbar-expand-lg site-nav" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Discover <span>Lesotho</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+            <li class="nav-item"><a class="nav-link active" href="gallery.html" aria-current="page">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <button class="theme-btn" id="themeToggle" type="button" aria-pressed="false">Dark mode</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero page-hero hero-gallery">
+      <div class="container">
+        <p class="eyebrow">Gallery</p>
+        <h1>Nine views from around the country.</h1>
+        <p class="lead">Click a photo to open it larger. Use the previous and next buttons, or the arrow keys, to move through the set.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="row align-items-end g-3 mb-4">
+          <div class="col-lg-8">
+            <h2 class="section-title mb-2" id="gallery-title">Mountains, villages and city streets</h2>
+            <p class="lead-muted mb-0">These photos come from Wikimedia Commons rather than my own camera. They are here to give a sense of the landscape. Full credits are in the README.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a class="btn btn-outline-brand" href="destinations.html">Read about these places</a>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item" type="button" data-caption="Highland grassland in the south-east">
+            <img src="images/gallery-sehlabathebe.jpg" alt="Green mountain grassland under a blue sky" loading="lazy">
+            <span>Highland grassland</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-caption="Maletsunyane Falls, seen from below">
+            <img src="images/gallery-falls.jpg" alt="Maletsunyane Falls dropping into a deep gorge" loading="lazy">
+            <span>Maletsunyane Falls</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-caption="The switchbacks on the way up Sani Pass">
+            <img src="images/gallery-sani.jpg" alt="A winding gravel road climbing a steep mountain" loading="lazy">
+            <span>Sani Pass</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-caption="Katse Dam and its reservoir">
+            <img src="images/gallery-katse.jpg" alt="Katse Dam wall holding back a large reservoir" loading="lazy">
+            <span>Katse Dam</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-caption="A village in the lowlands">
+            <img src="images/village.jpg" alt="Round stone houses with animals grazing nearby" loading="lazy">
+            <span>Lowland village</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-caption="Thaba Bosiu, the mountain stronghold of Moshoeshoe I">
+            <img src="images/gallery-thaba.jpg" alt="A flat-topped mountain with houses at the foot" loading="lazy">
+            <span>Thaba Bosiu</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-caption="Maseru, seen from Parliament Hill">
+            <img src="images/maseru.jpg" alt="City buildings spreading across a valley" loading="lazy">
+            <span>Maseru</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-caption="A rider on a Basotho pony">
+            <img src="images/basotho-blanket.jpg" alt="A person riding a pony past a village" loading="lazy">
+            <span>Pony country</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-caption="Stone buildings at Morija mission station">
+            <img src="images/morija.jpg" alt="Old stone buildings and a bare tree in winter" loading="lazy">
+            <span>Morija</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade gallery-modal" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="galleryModalLabel">Gallery</h2>
+          <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="gallery-preview" id="galleryImage" src="" alt="">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3">
+            <p class="mb-0" id="galleryCaption"></p>
+            <span class="gallery-counter" id="galleryCounter"></span>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button class="btn btn-outline-light" id="galleryPrev" type="button">Previous</button>
+          <button class="btn btn-brand" id="galleryNext" type="button">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a class="footer-brand" href="index.html">Discover Lesotho</a>
+          <p>A student tourism project about the Kingdom in the Sky.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-note">
+        <span>&copy; <span id="year"></span> Discover Lesotho. Teboho http</span>
+        <span>Photos from Wikimedia Commons. Credits are listed in the README.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

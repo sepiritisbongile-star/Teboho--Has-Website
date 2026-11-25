@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Place and activity ideas for a Lesotho trip, with a search, category filters and practical notes.">
+  <title>Discover Lesotho | Destinations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav class="navbar navbar-expand-lg site-nav" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Discover <span>Lesotho</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="destinations.html" aria-current="page">Destinations</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <button class="theme-btn" id="themeToggle" type="button" aria-pressed="false">Dark mode</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero page-hero hero-destinations">
+      <div class="container">
+        <p class="eyebrow">Places and experiences</p>
+        <h1>Pick a place to start.</h1>
+        <p class="lead">Eight ideas, from a famous waterfall to a capital city market. Use the search box or the category buttons to narrow them down.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="places-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="places-title">Destination ideas</h2>
+
+        <div class="row g-3 align-items-end mb-4">
+          <div class="col-lg-6">
+            <label class="form-label" for="destinationSearch">Search destinations</label>
+            <input class="form-control form-control-lg" id="destinationSearch" type="search" placeholder="Try waterfall, pony, Maseru...">
+          </div>
+          <div class="col-lg-6">
+            <span class="form-label d-block">Filter by category</span>
+            <div class="filter-row" role="group" aria-label="Filter destinations by category">
+              <button class="btn btn-filter active" data-filter="all" type="button">All</button>
+              <button class="btn btn-filter" data-filter="mountains" type="button">Mountains</button>
+              <button class="btn btn-filter" data-filter="culture" type="button">Culture</button>
+              <button class="btn btn-filter" data-filter="adventure" type="button">Adventure</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert alert-warning d-none" id="noResults" role="status">
+          Nothing matches that search. Try a different word, or choose "All".
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 destination-item" data-category="adventure mountains" data-search="maletsunyane falls waterfall semonkong hike abseil gorge">
+            <article class="place-card">
+              <img src="images/maletsunyane.jpg" alt="Maletsunyane Falls dropping into a green gorge" loading="lazy">
+              <div class="place-body">
+                <span class="tag">Waterfall</span>
+                <h3>Maletsunyane Falls</h3>
+                <p>A single drop of about 190 m near Semonkong. The walk down takes about an hour; the climb back takes a little longer.</p>
+                <button class="btn btn-outline-brand btn-sm details-btn" type="button" data-title="Maletsunyane Falls" data-details="Semonkong is roughly 120 km from Maseru, and the last part of the road is gravel. Guided walks leave from the lodge. The abseil beside the falls is only for experienced operators, so check the safety gear and insurance before you book.">Practical notes</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 destination-item" data-category="adventure mountains" data-search="sani pass border 4x4 road hairpins kwazulu natal">
+            <article class="place-card">
+              <img src="images/sani-pass.jpg" alt="Hairpin bends on the road up Sani Pass" loading="lazy">
+              <div class="place-body">
+                <span class="tag">Mountain pass</span>
+                <h3>Sani Pass</h3>
+                <p>A steep 4x4 road to the border post at 2,874 m, with hairpins and loose rock near the top.</p>
+                <button class="btn btn-outline-brand btn-sm details-btn" type="button" data-title="Sani Pass" data-details="You need a passport and a vehicle with low range. Do not attempt the pass in a sedan. The weather can change quickly, so go with a local driver if you are not used to mountain roads. The border post closes in the late afternoon.">Practical notes</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 destination-item" data-category="culture" data-search="thaba bosiu moshoeshoe history mountain fortress maseru">
+            <article class="place-card">
+              <img src="images/gallery-thaba.jpg" alt="Thaba Bosiu, a flat-topped mountain with a village at its base" loading="lazy">
+              <div class="place-body">
+                <span class="tag">History</span>
+                <h3>Thaba Bosiu</h3>
+                <p>The flat-topped mountain where Moshoeshoe I held out in the 19th century, about 20 km from Maseru.</p>
+                <button class="btn btn-outline-brand btn-sm details-btn" type="button" data-title="Thaba Bosiu" data-details="There is a visitors' centre at the foot of the mountain and a short climb to the top. Go early in the day, because there is very little shade. A local guide can explain the history better than the signs do.">Practical notes</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 destination-item" data-category="mountains" data-search="katse dam reservoir highlands water project engineering">
+            <article class="place-card">
+              <img src="images/katse-dam.jpg" alt="Katse Dam wall and reservoir in the highlands" loading="lazy">
+              <div class="place-body">
+                <span class="tag">Dam</span>
+                <h3>Katse Dam</h3>
+                <p>A 185 m concrete wall deep in the highlands, holding back a long reservoir that runs between the mountains.</p>
+                <button class="btn btn-outline-brand btn-sm details-btn" type="button" data-title="Katse Dam" data-details="The drive from Maseru takes around four hours. Tours of the dam wall usually run on weekdays, but times change, so call ahead. The air is thin here, so take the stairs slowly. Fuel up before you leave the main road.">Practical notes</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 destination-item" data-category="mountains" data-search="sehlabathebe national park hiking rock pools sandstone world heritage">
+            <article class="place-card">
+              <img src="images/sehlabathebe.jpg" alt="Wetland and grassland in Sehlabathebe National Park" loading="lazy">
+              <div class="place-body">
+                <span class="tag">National park</span>
+                <h3>Sehlabathebe</h3>
+                <p>Remote grassland, rock pools and sandstone arches in the south-east, close to the South African border.</p>
+                <button class="btn btn-outline-brand btn-sm details-btn" type="button" data-title="Sehlabathebe National Park" data-details="Access is by gravel road, which can be rough after rain. There is basic accommodation inside the park. Bring food, water and warm clothes, because the nearest shops are far away. The park forms part of the Maloti-Drakensberg World Heritage Site.">Practical notes</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 destination-item" data-category="culture" data-search="morija mission museum archive printing press history">
+            <article class="place-card">
+              <img src="images/morija.jpg" alt="Stone buildings and a bare tree at Morija" loading="lazy">
+              <div class="place-body">
+                <span class="tag">Culture</span>
+                <h3>Morija</h3>
+                <p>One of the oldest mission stations in the country, with a museum, an archive and a small printing press.</p>
+                <button class="btn btn-outline-brand btn-sm details-btn" type="button" data-title="Morija" data-details="Morija is about 40 km south of Maseru on the A2. The museum is usually open on weekdays, but hours are limited, so check before you travel. The archive is useful if you are looking for old photographs or newspapers.">Practical notes</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 destination-item" data-category="culture" data-search="maseru capital city market kingsway shopping food">
+            <article class="place-card">
+              <img src="images/maseru.jpg" alt="Maseru seen from Parliament Hill" loading="lazy">
+              <div class="place-body">
+                <span class="tag">City</span>
+                <h3>Maseru</h3>
+                <p>The capital and the only real city. A useful base for day trips, with markets and government buildings.</p>
+                <button class="btn btn-outline-brand btn-sm details-btn" type="button" data-title="Maseru" data-details="Kingsway is the main road through town. The market is the place for Basotho hats and blankets, and prices are usually open to a polite conversation. Traffic gets busy at the end of the working day.">Practical notes</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 destination-item" data-category="adventure" data-search="pony trekking horse riding basotho pony malealea semonkong">
+            <article class="place-card">
+              <img src="images/basotho-blanket.jpg" alt="A rider on a Basotho pony beside a village" loading="lazy">
+              <div class="place-body">
+                <span class="tag">Activity</span>
+                <h3>Pony trekking</h3>
+                <p>Guided rides from a few hours to several days. The Basotho pony is small, sure-footed and used to the paths.</p>
+                <button class="btn btn-outline-brand btn-sm details-btn" type="button" data-title="Pony trekking" data-details="Operators around Semonkong and Malealea arrange rides. Tell them how much riding you have done. Wear long trousers and closed shoes, and ask about helmets, because they are not always provided.">Practical notes</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="alert alert-light border mt-4 mb-0">
+          <strong>A note on distances:</strong> allow more time than you think. A 100 km trip on gravel can take three hours, and mountain weather can slow things down further.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="stay-title">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p class="eyebrow text-center">Practicalities</p>
+            <h2 class="section-title text-center" id="stay-title">Where to stay</h2>
+            <p class="lead-muted text-center mx-auto mb-4">These are types of accommodation, not live listings. Confirm prices and availability directly with the place you choose.</p>
+
+            <div class="accordion" id="stayAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#stayOne" aria-expanded="true" aria-controls="stayOne">
+                    Guesthouses and B&amp;Bs
+                  </button>
+                </h3>
+                <div id="stayOne" class="accordion-collapse collapse show" data-bs-parent="#stayAccordion">
+                  <div class="accordion-body">
+                    Most towns have small guesthouses. Breakfast is not always included, and prices are often quoted per room. Ask about backup power before you book, because outages happen.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stayTwo" aria-expanded="false" aria-controls="stayTwo">
+                    Lodges and hotels
+                  </button>
+                </h3>
+                <div id="stayTwo" class="accordion-collapse collapse" data-bs-parent="#stayAccordion">
+                  <div class="accordion-body">
+                    Maseru has the widest choice. Outside town, lodges cluster near places like Semonkong and Katse. Book ahead in December and around public holidays, when South African visitors tend to travel.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stayThree" aria-expanded="false" aria-controls="stayThree">
+                    Camping and backpackers
+                  </button>
+                </h3>
+                <div id="stayThree" class="accordion-collapse collapse" data-bs-parent="#stayAccordion">
+                  <div class="accordion-body">
+                    Camping is possible in some parks and along hiking routes. Check whether you need a permit, and do not assume there will be water or a shop nearby. Nights are cold, even in summer.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Not sure which one to pick?</h2>
+            <p>Send a short enquiry with your dates and what you like doing. The form on the contact page is a good place to start.</p>
+          </div>
+          <a class="btn btn-clay" href="contact.html">Ask about a trip</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="detailsTitle">Practical notes</h2>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="detailsBody"></div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-brand" type="button" data-bs-dismiss="modal">Close</button>
+          <a class="btn btn-brand" href="contact.html">Enquire</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a class="footer-brand" href="index.html">Discover Lesotho</a>
+          <p>A student tourism project about the Kingdom in the Sky.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-note">
+        <span>&copy; <span id="year"></span> Discover Lesotho. Teboho http</span>
+        <span>Photos from Wikimedia Commons. Credits are listed in the README.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
